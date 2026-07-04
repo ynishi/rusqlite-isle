@@ -1,0 +1,9 @@
+.claude
+workspace
+target
+.ryo
+.worktree
+Cargo.lock
+
+.worktrees
+.mcp.json

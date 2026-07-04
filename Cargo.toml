@@ -1,0 +1,26 @@
+[package]
+name = "rusqlite-isle"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.77"
+description = "Thread-isolated SQLite with cancellation, async bridge, and connection pool for rusqlite"
+license = "MIT OR Apache-2.0"
+authors = ["Yutaka Nishimura"]
+repository = "https://github.com/ynishi/rusqlite-isle"
+homepage = "https://github.com/ynishi/rusqlite-isle"
+keywords = ["sqlite", "rusqlite", "thread", "async", "pool"]
+categories = ["concurrency", "database", "asynchronous"]
+readme = "README.md"
+
+[features]
+default = []
+pool = []
+tokio = ["dep:tokio"]
+
+[dependencies]
+rusqlite = { version = "0.37", features = ["bundled"] }
+thiserror = "2"
+tokio = { version = "1", features = ["sync", "rt", "time", "macros"], optional = true }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
