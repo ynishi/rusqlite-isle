@@ -1,6 +1,6 @@
 [package]
 name = "rusqlite-isle"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.77"
 description = "Thread-isolated SQLite with cancellation, async bridge, and connection pool for rusqlite"
@@ -18,7 +18,7 @@ pool = []
 tokio = ["dep:tokio"]
 
 [dependencies]
-rusqlite = { version = "0.37", features = ["bundled"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
 thiserror = "2"
 tokio = { version = "1", features = ["sync", "rt", "time", "macros"], optional = true }
 

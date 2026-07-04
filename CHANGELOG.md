@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-07-05
+
+### Changed
+
+- Downgrade `rusqlite` dependency from `0.37` to `0.31` to restore
+  co-existence with downstream crates still on the `rusqlite 0.31` /
+  `libsqlite3-sys 0.28` ecosystem (e.g. `agent-block-core 0.30`). Only
+  a stable subset of `rusqlite` API (`Connection`, `Error`, `ErrorCode`,
+  `InterruptHandle`, `OpenFlags`, `Transaction`) is used, so no public
+  API changes in `rusqlite-isle` itself. See
+  [#1](https://github.com/ynishi/rusqlite-isle/issues/1) for the
+  `libsqlite3-sys` `links = "sqlite3"` conflict rationale.
+
 ## [0.1.0] - 2026-07-04
 
 ### Added
