@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-07-05
+
+### Changed
+
+- Bump `rusqlite` dependency from `0.32` to `0.37` for the
+  `libsqlite3-sys 0.35` ecosystem (latest release, e.g.
+  `outline-mcp-rmcp 0.10`). Same stable API subset — no public API
+  changes. Consumers on older `rusqlite` clusters should pin
+  `rusqlite-isle = "0.2"` (0.31) or `"0.3"` (0.32).
+
 ## [0.3.0] - 2026-07-05
 
 ### Changed
